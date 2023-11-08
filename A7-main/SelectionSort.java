@@ -1,7 +1,14 @@
 import java.util.Collections;
-
+/**
+ * Implements the class that constrcuts the selection sorting method.
+ */
 public class SelectionSort {
-
+  /**
+   * Constructs the selection sorting method, which scans the unsorted pile of cards for the smallest remaining card and removes it from unsorted and adds it to the tail of the sorted pile of cards.
+   * @param unsorted The unsorted list of cards
+   * @param record The recorder that keeps track of changes in the CardPile as it is sorted
+   * @return The sorted list of cards
+   */
   public static CardPile sort(CardPile unsorted, SortRecorder record) {
     
     // register the starting configuration with the recorder

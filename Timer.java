@@ -59,47 +59,59 @@ class Timer {
     String[] args1 = {"10000"};
     String[] args2 = {"20000"};
     String[] args3 = {"40000"};
+    String[] args4 = {"80000"};
     Timer timer = new Timer();
 
     System.out.println("Testing speed of 10000 cards");
     timer.start();
     InsertionSortTimer.main(args1);
-    System.out.println(timer.stop());
+    System.out.println("Insertion sort time: " + timer.stop());
 
     timer.start();
     SelectionSortTimer.main(args1);
-    System.out.println(timer.stop());
+    System.out.println("Selection sort time: " + timer.stop());
 
     timer.start();
-    MergeSortTimer.main(args1);
-    System.out.println(timer.stop());
+    QuickSortTimer.main(args1);
+    System.out.println("Quick sort time: " + timer.stop());
 
     System.out.println("Testing speed of 20000 cards");
     timer.start();
     InsertionSortTimer.main(args2);
-    System.out.println(timer.stop());
+    System.out.println("Insertion sort time: " + timer.stop());
 
     timer.start();
     SelectionSortTimer.main(args2);
-    System.out.println(timer.stop());
+    System.out.println("Selection sort time: " + timer.stop());
     
     timer.start();
-    MergeSortTimer.main(args2);
-    System.out.println(timer.stop());
+    QuickSortTimer.main(args2);
+    System.out.println("Quick sort time: " + timer.stop());
 
     System.out.println("Testing speed of 40000 cards");
     timer.start();
     InsertionSortTimer.main(args3);
-    System.out.println(timer.stop());
+    System.out.println("Insertion sort time: " + timer.stop());
 
     timer.start();
     SelectionSortTimer.main(args3);
-    System.out.println(timer.stop());
+    System.out.println("Selection sort time: " + timer.stop());
     
     timer.start();
-    MergeSortTimer.main(args3);
-    System.out.println(timer.stop());
+    QuickSortTimer.main(args3);
+    System.out.println("Quick sort time: " + timer.stop());
 
+    System.out.println("Testing speed of 80000 cards");
+    timer.start();
+    InsertionSortTimer.main(args4);
+    System.out.println("Insertion sort time: " + timer.stop());
+
+    timer.start();
+    SelectionSortTimer.main(args4);
+    System.out.println("Selection sort time: " + timer.stop());
     
+    timer.start();
+    QuickSortTimer.main(args4);
+    System.out.println("Quick sort time: " + timer.stop());
   }
 }

@@ -1,7 +1,15 @@
 import java.util.*;
 
+/**
+ * Implements the class that constrcuts the insertion sorting method.
+ */
 public class InsertionSort {
-  
+  /**
+   * Constructs the insertion sorting method, which scans the unsorted list of cards for the smallest remaining element and removes it from unsorted and adds it to the tail of the list of sorted cards.
+   * @param unsorted The unsorted list of cards
+   * @param record The recorder that keeps track of changes in the CardPile as it is sorted
+   * @return The sorted list of cards
+   */
   public static CardPile sort(CardPile unsorted, SortRecorder record) {
     
     // register the starting configuration with the recorder
@@ -17,13 +25,6 @@ public class InsertionSort {
     //     recorder after each card is transferred:
 
     // ***********************************************************
-          
-          //while hasprevious
-          //if less, move
-          //if more, iterate after
-
-          //else
-          //create iterator that goes backwards
 
     Card c = unsorted.getFirst();
     unsorted.removeFirst();

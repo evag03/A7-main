@@ -1,8 +1,14 @@
-import java.util.ArrayDeque;
 import java.util.*;
-
+/**
+ * Implements the class that constrcuts the insertion sorting method.
+ */
 public class MergeSort {
-  
+  /**
+   * Constructs the merge sorting method, which removes the first unsorted card from the unsorted list, finds the point where all previous cards are smaller than the removed one and all the next cards are greater than or equal to it, and puts the removed card into that point on the sorted list.
+   * @param unsorted The unsorted list of cards
+   * @param record The recorder that keeps track of changes in the CardPile as it is sorted
+   * @return The sorted list of cards
+   */
   public static CardPile sort(CardPile unsorted, SortRecorder record) {
     
     ArrayDeque<CardPile> queue = new ArrayDeque<CardPile>();
@@ -23,16 +29,12 @@ public class MergeSort {
       isolatedCard.addFirst(c);
       queue.add(isolatedCard);
 
-      // record.next();        // tell it this is a new step
-      // for (CardPile pile: queue) { // add all piles
-      //   record.add(pile);
-      // }
     }
     record.add(unsorted);
     
-// While more than one list remains on the queue:
-// Remove the first two lists from the queue and merge them, preserving their sorted order.
-// Put the result back at the end of the queue.
+    // While more than one list remains on the queue:
+    // Remove the first two lists from the queue and merge them, preserving their sorted order.
+    // Put the result back at the end of the queue.
 
     while (queue.size() > 1) {
       CardPile isolatedCard1 = queue.poll();
@@ -83,7 +85,6 @@ public class MergeSort {
         record.add(mergedPile);
 
       }
-      
 
       record.next();        // tell it this is a new step
         for (CardPile pile: queue) { // add all piles
@@ -91,21 +92,13 @@ public class MergeSort {
         }
 
     }
-
     
     // return the sorted result here
     return queue.remove();
   }
 
-// To merge two sorted lists into a single sorted list:
-// Look at the first element in each list.
-// Take the smaller of the two off the front of its old list and put it at the end of a new (merged) list.
-// Repeat this until both one of the old lists is empty, at which point you can append the remainder of the other original list to the new list.
-// If the original lists were sorted, and you always take the smallest element available, then the resulting list will also be sorted. (You might want to convince yourself of this fact before continuing.)
-// Note: the key operation here is the merging of two sorted lists. Probably you will want to develop a method for this and test it thoroughly before tackling the full program.
-
+ 
  /** Starts the program running */
-
 public static void main(String args[]) {
 
     // set up a class to record and display the sorting results

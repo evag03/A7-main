@@ -1,4 +1,13 @@
+import java.util.ArrayDeque;
+/**
+ * Implements the class that constrcuts the timer for the insertion sorting method.
+ */
 public class SelectionSortTimer {
+  /**
+   * Constructs a modifed version of the selection sorting method without references to record.
+   * @param unsorted The unsorted list of cards
+   * @return The sorted list of cards
+   */
   public static CardPile sort(CardPile unsorted) {
   
       // Here is the result list you will be creating

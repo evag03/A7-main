@@ -1,7 +1,13 @@
 import java.util.ListIterator;
-
+/**
+ * Implements the class that constrcuts the timer for the insertion sorting method.
+ */
 public class InsertionSortTimer {
-  
+  /**
+   * Constructs a modifed version of the insertion sorting method without references to record.
+   * @param unsorted The unsorted list of cards
+   * @return The sorted list of cards
+   */
   public static CardPile sort(CardPile unsorted) {
     
     // Here is the result list you will be creating
